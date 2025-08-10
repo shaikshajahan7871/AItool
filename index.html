@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Audio Transcription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Real-time Audio Transcription & Translation</h1>
+            <div id="status" class="status ready">Ready to start recording</div>
+        </header>
+
+        <div class="controls">
+            <button id="recordBtn" class="record-btn">
+                <span class="btn-icon">🎙️</span>
+                <span class="btn-text">Start Recording</span>
+            </button>
+
+            <div class="control-group">
+                <label for="languageSelect">Target Language:</label>
+                <select id="languageSelect">
+                    <option value="auto">Auto-detect</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ru">Russian</option>
+                    <option value="zh">Chinese</option>
+                </select>
+            </div>
+
+            <button id="copyBtn" class="copy-btn">📋 Copy Text</button>
+            <button id="clearBtn" class="clear-btn">🗑️ Clear</button>
+        </div>
+
+        <div class="content-area">
+            <div class="transcription-section">
+                <div class="section-header">
+                    <label>Live Transcription</label>
+                </div>
+                <textarea id="transcriptionText" readonly class="transcription-textarea"
+                         placeholder="Your speech will appear here in real-time..."></textarea>
+            </div>
+
+            <div class="transcription-section">
+                <div class="section-header">
+                    <label>Translation</label>
+                </div>
+                <textarea id="translationText" readonly class="transcription-textarea"
+                         placeholder="Translation will appear here..."></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

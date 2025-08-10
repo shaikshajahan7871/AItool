@@ -1,0 +1,7 @@
+sounddevice>=0.4.6
+openai-whisper>=20231117
+googletrans==4.0.0rc1
+pyperclip>=1.8.2
+PyQt5>=5.15.7
+scipy>=1.9.3
+numpy>=1.21.0
